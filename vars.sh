@@ -24,3 +24,4 @@ b=20
 VALUE=$((10+20/2*4-10))
 echo VALUE =$VALUE
 
+
