@@ -8,4 +8,7 @@ echo line1/n line2
 echo -e line1/n line2
 ## -e enables escape n to be used as a new line
 ## always use double quotes when we enable escape sequence
-echo -e "line1/n line2"
+echo -e "line1\nline2"
+
+
+
