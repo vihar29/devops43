@@ -18,3 +18,9 @@ echo -e "hello good evng ,today date is $DATE"
 ## command substitution syntax :: VAR_NAME=$(commands)
 DATE=$(date +%F)
 echo -e "hello good evening,today date is$DATE"
+## ARITHMETIC SUBSTITUTION
+a=10
+b=20
+VALUE=$((10+20/2*4-10))
+echo VALUE =$VALUE
+
