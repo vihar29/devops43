@@ -6,5 +6,6 @@
 echo $0
 echo $1= first arguments
 echo $2= second arguments
-echo $@
-echo $*
+echo all arguments= $@
+echo all arguments= $*
+echo no of arguments =$#
