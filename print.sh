@@ -23,6 +23,10 @@ echo -e "line1\nline2"
 # Cyan              36                46
 
 echo -e "\e[31mhello world with harsha fg colour"
+echo -e "\e["COLmMESSAGE\e[0m"]
+
 echo -e "/e[46m justice denied is justice denial"
+## usually when you enable colour u need to disable  it use 0 as color message
+## syntax ::echo -e "\e["COLmMESSAGE\e[0m"]
 
 
