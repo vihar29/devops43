@@ -7,3 +7,5 @@ x=abc
 ## how to access a variable
 ## $(VAR_NAME) or $VAR-NAME
 echo $a
+echo "course name" =$course_name"
+
