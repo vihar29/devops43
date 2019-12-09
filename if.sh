@@ -22,13 +22,18 @@
 #operators : -eq, -ne, -gt ,-lt ,-le ,-ge
 #3. file checks
 # refer , man bash to get all the file related operations
-ACTION =$1
+ACTION=$1
 if [ "$ACTION" == "start" ]; then 
 echo "starting service"
 exit 0
 elif [ "$ACTION" == "stop" ];then 
 echo "stopping service"
 exit 0
+else 
+  echo "Invalid Input"
+  exit 1
+fi
+
 
 
 
