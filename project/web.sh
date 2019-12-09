@@ -1,6 +1,6 @@
 #!/bin/bash
 # global variables
-LOG=/tmp/stack/log
+LOG=/tmp/stack.log
 
 
 
@@ -11,7 +11,7 @@ LOG=/tmp/stack/log
 yum install nginx -y &>>$LOG
 if [ $? - eq0];then
 echo "nginx installation success"
-else ["$?" =! "eq0"];then
+else 
 echo "nginx installation failure"
 exit 1
 fi
