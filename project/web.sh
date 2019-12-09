@@ -1,7 +1,17 @@
-#! bin/bash
-yum install nginx -y
-if [ "$?" == "eq0"];then
+#!/bin/bash
+# global variables
+LOG=/tmp/stack/log
+
+
+
+
+
+
+#web server installation
+yum install nginx -y &>>$LOG
+if [ $? - eq0];then
 echo "nginx installation success"
-elif ["$?" =! "eq0"];then
+else ["$?" =! "eq0"];then
 echo "nginx installation failure"
 exit 1
+fi
