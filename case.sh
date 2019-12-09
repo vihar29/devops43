@@ -10,7 +10,7 @@
 #;;
 #esac
 Action=$1
-case $action insh
+case $action in
 start)
 echo "starting service"
 exit 0
@@ -19,7 +19,7 @@ stop)
 echo "stopping service"
 exit 0
 ;;
-invalid)
+*)
 echo "invalid input"
 exit 1
 ;;
