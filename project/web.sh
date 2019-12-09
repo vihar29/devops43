@@ -20,6 +20,9 @@ STATUS_CHECK()
 }
 
 #web server installation
+HEAD() {
+    echo -e "\n\t\e[33m$1\e[0m"
+}
 yum install nginx -y &>>$LOG
 STATUS_CHECK $? "NGINX SERVER INSTALLATION"
 
