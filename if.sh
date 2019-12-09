@@ -23,10 +23,10 @@
 #3. file checks
 # refer , man bash to get all the file related operations
 action =$1
-if ["$action" == "start"]; then 
+if ["$ACTION" == "start"]; then 
 echo "starting service"
 exit 0
-elif ["$action"=="stop"];then 
+elif ["$ACTION"=="stop"];then 
 echo "stopping service"
 exit 0
 
