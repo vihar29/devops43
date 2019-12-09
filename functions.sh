@@ -13,3 +13,8 @@ function sample2 {
 ##
 sample
 sample2
+## function is atype of command
+Demo1() {
+    echo "first argument =$1"
+}
+Demo1 "abc"
