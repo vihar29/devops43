@@ -10,7 +10,7 @@
 #;;
 #esac
 Action=$1
-case $action in
+case $Action in
 start)
 echo "starting service"
 exit 0
