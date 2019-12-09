@@ -22,7 +22,7 @@
 #operators : -eq, -ne, -gt ,-lt ,-le ,-ge
 #3. file checks
 # refer , man bash to get all the file related operations
-action =$1
+ACTION =$1
 if ["$ACTION" == "start"]; then 
 echo "starting service"
 exit 0
