@@ -1,9 +1,9 @@
 #!/bin/bash
 # global variables
 LOG=/tmp/stack.log
-G= "\e[32m"
-R= "\e[31m"
-N=  "\e[0m"
+G="\e[32m"
+R="\e[31m"
+N="\e[0m"
 
 
 
