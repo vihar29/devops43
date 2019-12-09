@@ -26,7 +26,7 @@ action =$1
 if ["$ACTION" == "start"]; then 
 echo "starting service"
 exit 0
-elif ["$ACTION"=="stop"];then 
+elif ["$ACTION" == "stop"];then 
 echo "stopping service"
 exit 0
 
