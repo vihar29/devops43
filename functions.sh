@@ -30,3 +30,5 @@ demo2(){
 }
 demo2 
 echo "exit status of function=$?"
+
+git
