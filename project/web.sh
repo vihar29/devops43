@@ -1,15 +1,20 @@
 #!/bin/bash
 # global variables
 LOG=/tmp/stack.log
+G= echo -e "\e[32mMESSAGE"
+R= echo -e "\e[31mMESSAGE"
+N= echo -e "\e[0m"
+
+
 
 
 #functions
 STATUS_CHECK()
 {
     if [ $1 -eq 0 ];then
-    echo " $2 --  SUCCESS"
+    echo " $2 --  ${G}SUCCESS${N}"
     else
-    echo " $2 --  FAILURE"
+    echo " $2 --  ${R}FAILURE${N}"
     exit 1
     fi
 }
