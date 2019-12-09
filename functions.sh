@@ -25,7 +25,8 @@ Demo1 "abc"
 demo2(){
     echo "windsor is beautiful"
     return 0
-    echo "harsha goud"
 
+    echo "harsha goud"
 }
-demo2
+demo2 
+echo "exit status of function=$?"
