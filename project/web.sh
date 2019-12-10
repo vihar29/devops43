@@ -11,10 +11,10 @@ N="\e[0m"
 #functions
 STATUS_CHECK()
 {
-    if [ $1 -eq 0 ];then
-    echo -e "$2 --  ${G}SUCCESS${N}"
+    if [ $0 -eq 0 ];then
+    echo -e "$1 --  ${G}SUCCESS${N}"
     else
-    echo -e "$2 --  ${R}FAILURE${N}"
+    echo -e "$1 --  ${R}FAILURE${N}"
     exit 1
     fi
 }
