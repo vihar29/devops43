@@ -20,7 +20,7 @@ STATUS_CHECK()
 }
 #functions
 HEAD() {
-    echo -e "\n\t\e[33mblink$1\e[0m"
+    echo -e "\n\t\e[33m$1\e[0m"
 }
 
 #web server installation
@@ -31,8 +31,9 @@ STATUS_CHECK $? "NGINX SERVER INSTALLATION"
 rm -rf /usr/share/nginx/html/*  &>>$LOG
 STATUS_CHECK $? "REMOVE OLD WEBAPPS CONTENT"
 
-#curl -s https://devopsb43n.s3.amazonaws.com/d43.zip -o /tmp/d43.zip 
-#unzip /tmp/d43.zip -d "/usr/share/nginx/html/"
+curl -s https://devopsb43n.s3.amazonaws.com/d43.zip -o /tmp/d43.zip 
+unzip /tmp/d43.zip -d "/usr/share/nginx/html/"
+STATUS_CHECK $? "DOWNLOAD NEW WEBAPPS CONTENT"
 
 ## variable declared in function can be accessed and modified inside function
 ## a variable declared in function main program can be accessed and modified inside function
