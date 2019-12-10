@@ -18,11 +18,12 @@ STATUS_CHECK()
     exit 1
     fi
 }
-
-#web server installation
+#functions
 HEAD() {
     echo -e "\n\t\e[33m$1\e[0m"
-}
+
+#web server installation
+HEAD "WEB SERVER SETUP"
 yum install nginx -y &>>$LOG
 STATUS_CHECK $? "NGINX SERVER INSTALLATION"
 
