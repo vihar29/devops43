@@ -20,7 +20,7 @@ STATUS_CHECK()
 }
 #functions
 HEAD() {
-    echo -e "\n\t\e[33m$1\e[0m"
+    echo -e "\n\t\e[33mblink$1\e[0m"
 }
 
 #web server installation
