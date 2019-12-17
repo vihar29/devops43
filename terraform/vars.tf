@@ -27,4 +27,5 @@ resource "null_resource" "sample3" {
   provisioner "local-exec" {
     command = "echo -e value1 = ${var.simple-list[1]}"
   }
+}
 
