@@ -11,6 +11,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = ["sg-0f9f5f95328faead3"]
   provisioner "remote-exec" {
     connection {
+      host = self.public_ip
       user = "root"
       password = "DevOps321"
     }
