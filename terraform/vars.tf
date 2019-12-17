@@ -20,7 +20,7 @@ variable "simple-list" {
   default = [1 ,2]
 
 }
-resource "null_resource" "sample2" {
+resource "null_resource" "sample3" {
   provisioner "local-exec" {
     command = "echo -e \" string = ${var.simple-string}\n boolean = ${var.simple-boolean}\n number =${var.simple-number}\""
   }
