@@ -5,11 +5,11 @@ variable "sample2" {
   default = 100112
 
 }
-local {
+locals {
   sample01 = "${var.sample}-${var.sample2}"
 }
 
 output "SAMPLE"{
-  value = local.sample01
+  value = locals.sample01
 
 }
