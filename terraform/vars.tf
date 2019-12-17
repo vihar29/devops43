@@ -27,9 +27,7 @@ variable "simple-map" {
     best_place = "riverside"
   }
 }
-variable "cli-vars" {
-
-}
+variable "cli-var" {}
 resource "null_resource" "sample3" {
   provisioner "local-exec" {
     command = "echo -e \" string = ${var.simple-string}\n boolean = ${var.simple-boolean}\n number =${var.simple-number}\""
