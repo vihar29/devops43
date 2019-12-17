@@ -1,6 +1,6 @@
 variable "sample-var" {
-  default = abc
+  default = "abc"
 }
 output "SAMPLE_VAR" {
-  value = "var.sample-var"
+  value = var.sample-var
 }
