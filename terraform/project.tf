@@ -15,10 +15,10 @@ resource "aws_instance" "web" {
       user = "root"
       password = "DevOps321"
     }
-    inline = [
-      "cd /tmp",
-      "git clone https://github.com/vihar29/devops43.git"
-      "cd /devops43/project/"
+    inline = {
+      "cd /tmp" ,
+      "git clone https://github.com/vihar29/devops43.git",
+      "cd /devops43/project/",
       "sh web.sh"
   }
 }
