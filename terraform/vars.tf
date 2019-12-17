@@ -23,8 +23,8 @@ variable "simple-list" {
 variable "simple-map" {
   type = map
   default = {
-    city_name = windsor
-    best_place = riverside
+    city_name = "windsor"
+    best_place = "riverside"
   }
 }
 resource "null_resource" "sample3" {
