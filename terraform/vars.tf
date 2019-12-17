@@ -32,7 +32,8 @@ resource "null_resource" "sample3" {
     command = "echo -e \" string = ${var.simple-string}\n boolean = ${var.simple-boolean}\n number =${var.simple-number}\""
   }
   provisioner "local-exec" {
-    command = "echo -e value1 = ${var.simple-list[1]} \n city = ${var.simple-map["trainer_name"]}"
+    command = "echo -e value1 = ${var.simple-list[1]} \n city = ${var.simple-map["best_place"]}"
+    
   }
 }
 
