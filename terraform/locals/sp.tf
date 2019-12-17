@@ -10,6 +10,6 @@ locals {
 }
 
 output "SAMPLE"{
-  value = locals.sample01
+  value = local.sample01
 
 }
