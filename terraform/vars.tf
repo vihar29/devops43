@@ -20,12 +20,19 @@ variable "simple-list" {
   default = [1 ,2]
 
 }
+variable "simple-map" {
+  type = map
+  default = {
+    city_name = windsor
+    best_place = riverside
+  }
+}
 resource "null_resource" "sample3" {
   provisioner "local-exec" {
     command = "echo -e \" string = ${var.simple-string}\n boolean = ${var.simple-boolean}\n number =${var.simple-number}\""
   }
   provisioner "local-exec" {
-    command = "echo -e value1 = ${var.simple-list[1]}"
+    command = "echo -e value1 = ${var.simple-list[1]} \n city = ${var.simple-map["trainer_name"]}"
   }
 }
 
