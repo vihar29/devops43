@@ -9,7 +9,7 @@ resource "aws_instance" "node1" {
   ami = var.aws_ami
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-0f9f5f95328faead3"]
-  tags {
+  tags = {
     Name ="NODE1"
   }
 
@@ -18,7 +18,7 @@ resource "aws_instance" "node2" {
   ami = var.aws_ami
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-0f9f5f95328faead3"]
-  tags {
+  tags = {
     Name ="NODE2"
   }
 
