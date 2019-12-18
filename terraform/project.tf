@@ -18,7 +18,7 @@ resource "aws_instance" "web" {
     inline = [
       "cd /tmp" ,
       "git clone https://github.com/vihar29/devops43.git",
-      "cd project/",
+      "cd devops43/project/",
       "sh web.sh"
     ]
   }
