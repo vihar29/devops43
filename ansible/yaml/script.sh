@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! -f "$1"];then
+if [ ! -f "$1" ];then
 echo "given file does not exist"
 exit 1
 fi
