@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-west-2"
 }
 variable "aws_ami" {
-  default = "ami-0c98a6bf9be7285b5"
+  default = "ami-021e78b340c8f907e"
 }
 
 resource "aws_instance" "node1" {
