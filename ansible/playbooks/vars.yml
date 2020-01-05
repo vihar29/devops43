@@ -1,5 +1,5 @@
-### declaring a variable
-  - name: print a variable
+### declaring a variable at play and print the value
+  - name: print a variable from play
     hosts: all
     vars:
       URL: play.google.com
@@ -7,3 +7,26 @@
       - name: print a variable
         debug:
           msg: "URL = {{URL}}"
+
+### declaring a variable at tasks and print the value
+- name: print a variable from task
+    hosts: all
+     tasks:
+      - name: print a variable
+        debug:
+          msg: "URL = {{URL}}"
+          vars:
+            URL: play.google.com
+### what happens if you have same variable in play and task level
+## local variables are proritized in any scripting language , so task variable is going to be the value parsed to task and always you get vars from task
+
+## variable data can be loaded from variable file
+  - name: print values from a file
+    hosts: all
+    vars_files:
+      - file.yml
+      tasks:
+        - name: print a variable
+          debug:
+            msg: "URL = {{URL}}"
+            
