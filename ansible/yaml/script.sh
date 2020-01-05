@@ -14,7 +14,8 @@ TRAINER_NAME=$(cat batch43.yml | yq . | jq '.trainerName')
  
  while [ $STUDENT_COUNT -gt 0 ]; do
 
- echo -e "hello ${NAMES[$1]},\n\tmy name is $($TRAINER_NAME)"
+ echo -e "hello ${NAMES[$1]},\n\tmy name is ${TRAINER_NAME}"
+ 
  STUDENT_COUNT=$(($STUDENT_COUNT-1))
  i=$(($i+1))
  done
