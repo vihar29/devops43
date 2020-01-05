@@ -29,4 +29,17 @@
         - name: print a variable
           debug:
             msg: "URL = {{URL}}"
-            
+### VARS has more priority than VARS_FILES
+
+
+## variable data can be read from user as in read command in bash
+- name: print values from a file
+    hosts: all
+    vars_prompt:
+      - name: URL
+        prompt: enter the URL
+        private: no
+        tasks:
+        - name: print a variable
+          debug:
+            msg: "URL = {{URL}}"
