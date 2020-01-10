@@ -1,0 +1,11 @@
+- name: send output of a task to a variable
+  hosts: all
+  tasks:
+    - name: run ls command
+      shell: ls /tmp
+      register: OUT
+      # OUT is a variable
+
+      - name: print the data in variable OUT
+       debug:
+         msg: "{{OUT}}" 
