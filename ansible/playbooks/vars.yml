@@ -1,3 +1,4 @@
+
 ### declaring a variable at play and print the value
   - name: print a variable from play
     hosts: all
@@ -9,10 +10,10 @@
           msg: "URL = {{URL}}"
 
 ### declaring a variable at tasks and print the value
-- name: print a variable from task
+-   name: print a variable from task
     hosts: all
-     tasks:
-      - name: print a variable
+    tasks:
+    - name: print a variable
         debug:
           msg: "URL = {{URL}}"
           vars:
