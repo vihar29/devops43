@@ -7,6 +7,6 @@
       # OUT is a variable
 
     - name: print the data in variable OUT
-        debug:
-         msg: "{{OUT}}"
+      debug:
+      msg: "{{OUT}}"
 
