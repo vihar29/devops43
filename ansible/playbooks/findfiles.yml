@@ -4,3 +4,9 @@
     - name: find all the lines
       find:
         paths: /usr/share/nginx/html/
+      register: OUT
+
+    - name: print the file
+      debug:
+        msg: "{{OUT}}"
+        
