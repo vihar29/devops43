@@ -30,7 +30,7 @@
 - name: Print values from a file 
   hosts: all 
   vars_files:
-    - vars01.yml
+    - file.yml
   tasks:
     - name: Print a value from Vars File 
       debug:
