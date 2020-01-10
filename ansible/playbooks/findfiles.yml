@@ -1,0 +1,6 @@
+- name: find the list of files in a directory
+  hosts: all
+  tasks:
+    - name: find all the lines
+      find:
+        paths: /usr/share/nginx/html/
