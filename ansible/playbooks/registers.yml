@@ -6,7 +6,7 @@
       register: OUT
       # OUT is a variable
 
-      - name: print the data in variable OUT
+    - name: print the data in variable OUT
         debug:
          msg: "{{OUT}}"
 
