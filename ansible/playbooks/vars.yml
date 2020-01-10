@@ -10,7 +10,7 @@
           msg: "URL = {{URL}}"
 
 ### declaring a variable at tasks and print the value
--   name: print a variable from task
+- name: print a variable from task
     hosts: all
     tasks:
     - name: print a variable
