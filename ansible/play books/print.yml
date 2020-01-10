@@ -1,8 +1,0 @@
-- name: print hello
-hosts: all
-tasks:
-  - name: say hello from debug module
-    debug:
-    msg: hello
-    verbosity: 3
-
