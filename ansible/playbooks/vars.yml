@@ -10,34 +10,34 @@
           msg: "URL = {{URL}}"
 
 ### declaring a variable at tasks and print the value
-   name: print a variable from task
-    hosts: all
-    tasks:
-       name: print a variable
+   - name: print a variable from task
+     hosts: all
+     tasks:
+      - name: print a variable
         debug:
           msg: "URL = {{URL}}"
-          vars:
-            URL: play.google.com
+           vars:
+           URL: play.google.com
 ### what happens if you have same variable in play and task level
 ## local variables are proritized in any scripting language , so task variable is going to be the value parsed to task and always you get vars from task
 
 ## variable data can be loaded from variable file
-    name: print values from a file
-    hosts: all
-    vars_files:
-       file.yml
-      tasks:
-         name: print a variable
-          debug:
+    - name: print values from a file
+      hosts: all
+      vars_files:
+         file.yml
+         tasks:
+        - name: print a variable
+           debug:
             msg: "URL = {{URL}}"
 ### VARS has more priority than VARS_FILES
 
 
 ## variable data can be read from user as in read command in bash
-  name: print values from a file
+  - name: print values from a file
     hosts: all
     vars_prompt:
-       name: URL
+      - name: URL
         prompt: enter the URL
         private: no
         tasks:
@@ -46,18 +46,18 @@
             msg: "URL = {{URL}}"
 ### variable can be read from inventory file also
 ## IP URL=host.google.com
- name: print values from a inventory file
+ - name: print values from a inventory file
     hosts: all
       tasks:
-         name: print a value from inventory file
+        - name: print a value from inventory file
           debug:
             msg: "URL = {{URL}}"
 
 ## acces variable from facts
-   name: access vars fromfacts
-    hosts: all
-    tasks:
-       name: print total mem of node.
+   - name: access vars fromfacts
+     hosts: all
+     tasks:
+      - name: print total mem of node.
         debug:
           msg: total mem
 
