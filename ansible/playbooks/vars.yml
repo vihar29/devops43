@@ -1,63 +1,75 @@
+### Declare a variable  at play and print the value.
 
-### declaring a variable at play and print the value
-  - name: print a variable from play
-    hosts: all
-    vars:
-      URL: play.google.com
-    tasks:
-      - name: print a variable
-        debug:
-          msg: "URL = {{URL}}"
+- name: Print a variable from play
+  hosts: all
+  vars:
+    URL: play.google.com
+  tasks:
+    - name: Print a variable 
+      debug:
+        msg: "URL = {{URL}}"
 
-### declaring a variable at tasks and print the value
-   - name: print a variable from task
-     hosts: all
-     tasks:
-      - name: print a variable
-        debug:
-          msg: "URL = {{URL}}"
-           vars:
-           URL: play.google.com
-### what happens if you have same variable in play and task level
-## local variables are proritized in any scripting language , so task variable is going to be the value parsed to task and always you get vars from task
+### Declare a variable at task and print the value.
 
-## variable data can be loaded from variable file
-    - name: print values from a file
-      hosts: all
-      vars_files:
-         file.yml
-         tasks:
-        - name: print a variable
-           debug:
-            msg: "URL = {{URL}}"
-### VARS has more priority than VARS_FILES
+- name: Print a variable from task
+  hosts: all
+  vars:
+    URL: play.google.com
+  tasks:
+    - name: Print a variable 
+      debug:
+        msg: "URL = {{URL}}"
+      vars:
+        URL: task.google.com 
+
+## What happens if you have same variable in both PLAY and TASK  ??
+## Local variables are prioritized in any scripting language , So task variable is going to be the value parsed to task. And always you get vars from task 
+
+## Variable data can be loaded from variable file 
+
+- name: Print values from a file 
+  hosts: all 
+  vars_files:
+    - vars01.yml
+  tasks:
+    - name: Print a value from Vars File 
+      debug:
+        msg: URL = {{URL}}
+
+# Which variable will be picked up if you have given both VARS_FILES and then VARS ??
+## VARS get more priority than VARS_FILES.
 
 
-## variable data can be read from user as in read command in bash
-  - name: print values from a file
-    hosts: all
-    vars_prompt:
-      - name: URL
-        prompt: enter the URL
-        private: no
-        tasks:
-         name: print a variable
-          debug:
-            msg: "URL = {{URL}}"
-### variable can be read from inventory file also
-## IP URL=host.google.com
- - name: print values from a inventory file
-    hosts: all
-      tasks:
-        - name: print a value from inventory file
-          debug:
-            msg: "URL = {{URL}}"
+## Variable data can be read from USER as well like read command in shell scripting.
 
-## acces variable from facts
-   - name: access vars fromfacts
-     hosts: all
-     tasks:
-      - name: print total mem of node.
-        debug:
-          msg: total mem
+- name: Print values from a file 
+  hosts: all 
+  vars_prompt:
+    - name: URL 
+      prompt: Enter the URL
+      private: no
+  tasks:
+    - name: Print a value from prompt File 
+      debug:
+        msg: URL = {{URL}} 
 
+
+## Variable can be read from inventory file as well 
+# IP  URL_HOST=host.google.com 
+
+- name: Print values from a invetnory file 
+  hosts: all 
+  tasks:
+    - name: Print a value from inventory File 
+      debug:
+        msg: URL = {{URL_HOST}} 
+
+
+## Access varibles from facts. 
+
+- name: Access facts.
+  hosts: all
+  tasks:
+    - name: Print total mem of node.
+      debug:
+        msg: Total Mem = {{facter_memorysize_mb}}
