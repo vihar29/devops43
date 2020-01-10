@@ -15,19 +15,19 @@ resource "aws_instance" "node1" {
   }
 
 }
-resource "aws_instance" "node2" {
-  ami = var.aws_ami
-  instance_type = "t2.micro"
-  key_name = "yourkey"
-  vpc_security_group_ids = ["sg-0f9f5f95328faead3"]
-  tags = {
-    Name ="NODE2"
-  }
+#resource "aws_instance" "node2" {
+ # ami = var.aws_ami
+  #instance_type = "t2.micro"
+  #key_name = "yourkey"
+  #vpc_security_group_ids = ["sg-0f9f5f95328faead3"]
+  #tags = {
+   # Name ="NODE2"
+  #}
 
-}
+#}
 resource "local_file" "inventory" {
   filename = "../hosts-inventory"
-  content = "${aws_instance.node1.public_ip}\n${aws_instance.node2.public_ip}"
+  content = "${aws_instance.node1.public_ip}"
 }
 
 
