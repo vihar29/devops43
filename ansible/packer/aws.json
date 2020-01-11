@@ -1,0 +1,24 @@
+{
+    "builders": [{
+      "type": "amazon-ebs",
+      "region": "us-west-2",
+      "source_ami": "ami-003d8924a33dc0fd7",
+      "instance_type": "t2.micro",
+      "ssh_username": "centos",
+      "ami_groups": "all",
+      "ami_name": "Centos-7-Updated-Raghu-DevOps-Customized-2",
+      "ami_regions": ["us-east-1"],
+      "tags": {
+          "Name" : "Centos-7-Updated-Raghu-DevOps-Customized",
+          "Created_By" : "Packer",
+          "Base_AMI_Name": "{{ .SourceAMIName }}"
+      }
+    }],
+  
+    "provisioners": [
+        {
+          "type":  "shell",
+          "inline": ["curl -s  https://gitlab.com/cit-devops/intros/raw/master/ami-setup.sh | sudo bash"]
+        }]
+  }
+  
