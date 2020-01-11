@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: install nginx web server
-      package: nginx
-        name: nginx server
+      package: 
+        name: nginx 
         state: present
         
