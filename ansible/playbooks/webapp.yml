@@ -6,4 +6,16 @@
       package: 
         name: nginx 
         state: present
+    - name: find all the default files
+      find:
+        paths: /usr/share/nginx/html/
+        file_type: any
+      register: OUT
+    - name: delete the files
+      file:
+        path: "{{item.path}}"
+        state: absent
+      loop: "{{OUT.files}}"
+      become: yes
+      
         
