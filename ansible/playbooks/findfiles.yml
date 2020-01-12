@@ -5,7 +5,7 @@
       find:
         paths: /usr/share/nginx/html/
         file_type: any
-    register: OUT
+      register: OUT
 - name: delete the files
   file:
     path: "{{item.path}}"
