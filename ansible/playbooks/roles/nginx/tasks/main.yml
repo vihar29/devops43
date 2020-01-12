@@ -1,7 +1,7 @@
-    - name: install a configure web server
-      hosts: all
-      become: yes
-      tasks:
+- name: install a configure web server
+  hosts: all
+  become: yes
+  tasks:
     - name: install nginx web server
       package: 
         name: nginx 
