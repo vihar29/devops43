@@ -1,5 +1,6 @@
 - name: find the list of files in a directory
   hosts: all
+  become: yes
   tasks:
     - name: find all the lines
       find:
@@ -11,4 +12,5 @@
        path: "{{item.path}}"
        state: absent
       loop: "{{OUT.files}}"
+      become: yes 
         
