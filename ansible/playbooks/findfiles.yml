@@ -8,5 +8,6 @@
         register: OUT
      - name: print the file
        debug:
-         msg: "{{OUT}}"
+         msg: "{{item.path}}"
+       loop: "{{OUT.files}}"
         
