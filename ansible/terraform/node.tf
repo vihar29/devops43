@@ -10,6 +10,7 @@ resource "aws_instance" "node1" {
   instance_type = "t2.micro"
   key_name = "yourkey"
   vpc_security_group_ids = ["sg-0f9f5f95328faead3"]
+  iam_instance_profile = "EC2-READONLY"
   tags = {
     Name ="NODE1"
   }
