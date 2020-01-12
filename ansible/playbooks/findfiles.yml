@@ -6,10 +6,7 @@
         paths: /usr/share/nginx/html/
         file_type: any
       register: OUT
-   # - name: print the file
-    #  debug:
-     #   msg: "{{item.path}}"
-      #loop: "{{OUT.files}}"
+  
   - name: delete the files
     file:
       path: "{{item.path}}"
