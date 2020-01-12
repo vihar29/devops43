@@ -23,3 +23,8 @@
         src: https://studentapi-cit.s3-us-west-2.amazonaws.com/studentapp-frontend.tar.gz
         dest: /usr/share/nginx/html
         remote_src: yes
+    - name: start the service
+      service:
+        name: nginx
+        state: restarted
+        enabled: yes
