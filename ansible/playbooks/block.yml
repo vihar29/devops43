@@ -7,5 +7,4 @@
        insertbefore: "^        error_page 404 /404.html;"
        block: 
         location /student {
-          proxy_pass http://localhost:8080/student;
-       }
+          proxy_pass http://localhost:8080/student;}
