@@ -5,7 +5,6 @@
       blockinfile:
        path: /tmp/nginx.conf
        insertbefore: "^        error_page 404 /404.html;"
-       marker: "\t# {mark} ANSIBLE MANAGED BLOCK "
-       block: |2
+       block:
         location /student {
           proxy_pass http://localhost:8080/student;}
