@@ -7,3 +7,8 @@
       template:
         src: nginx.j2.conf
         dest: /tmp/nginx.conf  
+      vars:
+        locations:
+          - student
+          - demo
+          - demo1
