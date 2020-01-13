@@ -1,0 +1,8 @@
+- name: usage of filters
+  hosts: all
+  vars:
+   URL: http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
+  tasks: 
+    - name: Filter a column 
+      debug:
+        msg: "{{ URL.split('/') | last }}"
